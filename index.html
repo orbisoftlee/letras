@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tabla con dos secciones</title>
+<script>
+function cambiarContenido(img, txt) {
+    document.getElementById("marcoImagen").src = img;
+    document.getElementById("marcoTexto").src = txt;
+}
+</script>
+</head>
+<body bgcolor="#D8A700">
+
+<table border="0" width="100%" height="100%">
+  <tr>
+    <!-- Columna izquierda con enlaces -->
+    <td rowspan="2" width="200" valign="top"><br>
+      <a href="#" onclick="cambiarContenido('acordes/hastaque.jpg','letras/hastaqueletra.jpg')">1. Hasta que te conoci</a><br>
+      <a href="#" onclick="cambiarContenido('acordes/eltriste.jpg','letras/eltristeletra.jpg')">2. El Triste</a><br>
+      <a href="#" onclick="cambiarContenido('acordes/hawai.jpg','letras/hawailetra.jpg')">3. Hawai</a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/afuera.jpg','letras/afueraletra.jpg')">4. Afuera </a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/oyemiamor.jpg','letras/oyemiamorletra.jpg')">5. Oye mi amor </a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/mevale.jpg','letras/mevaleletra.jpg')">6. Me vale </a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/mujeramante.jpg','letras/mujeramanteletra.jpg')">7. Mujer Amante</a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/miprimerdiasinti.jpg','letras/miprimerdiasintiletra.jpg')">8. Mi primer dia sin ti </a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/nodejesque.jpg','letras/nodejesqueletra.jpg')">9. No dejes que</a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/adioslepido.jpg','letras/adioslepidoletra.jpg')">10. A Dios le pido</a><br>
+	  <a href="#" onclick="cambiarContenido('acordes/.jpg','letras/.jpg')">4. </a><br>
+    </td>
+    <!-- Arriba: imagen -->
+    <td height="150">
+      <iframe id="marcoImagen" width="100%" height="140" frameborder="0"></iframe>
+    </td>
+  </tr>
+  <tr>
+    <!-- Abajo: texto -->
+    <td>
+      <iframe id="marcoTexto" width="100%" height="320" frameborder="0"></iframe>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
