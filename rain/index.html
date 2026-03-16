@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canciones</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#D8A700;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.menu{
+    width:220px;
+    padding:10px;
+}
+
+.menu a{
+    display:block;
+    padding:6px;
+    text-decoration:none;
+    color:black;
+}
+
+.menu a:hover{
+    background:#f2c94c;
+}
+
+.contenido{
+    flex:1;
+    text-align:center;
+    padding:20px;
+}
+
+.contenido img{
+    max-width:100%;
+    height:auto;
+}
+
+.inicio{
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* Adaptación para celular */
+@media (max-width:700px){
+    .container{
+        flex-direction:column;
+    }
+    .menu{
+        width:100%;
+    }
+}
+</style>
+
+<script>
+function cambiarContenido(img, txt){
+    document.getElementById("inicio").style.display="none";
+    document.getElementById("marcoImagen").src="./"+img;
+    document.getElementById("marcoTexto").src="./"+txt;
+    document.getElementById("marcoImagen").style.display="block";
+    document.getElementById("marcoTexto").style.display="block";
+}
+</script>
+
+</head>
+  <body>
+    <div class="container">
+    <div class="menu">
+      
+      <a onclick="cambiarContenido('lobohombre.JPG','lobohombreletra.JPG')">Lobo Hombre en Paris</a>
+      <a onclick="cambiarContenido('afuera.JPG','afueraletra.JPG')">Afuera</a>
+      <a onclick="cambiarContenido('amordepredador.JPG','amordepredadorletra.JPG')">Amor Depredador</a>
+      <a onclick="cambiarContenido('perdido.JPG','perdidoletra.JPG')">Perdido</a>
+      <a onclick="cambiarContenido('ciudaddelafuria.JPG','ciudaddelafurialetra.JPG')">Ciudad de la Furia</a>
+      <a onclick="cambiarContenido('bolerofalaz.JPG','bolerofalazletra.JPG')">Bolero Falaz</a>
+      <a onclick="cambiarContenido('malditoduende.JPG','malditoduendeletra.JPG')">Maldito Duende</a>
+      <a onclick="cambiarContenido('malagente.JPG','malagenteletra.JPG')">Mala Gente</a>
+      <a onclick="cambiarContenido('mandaunasenal.JPG','mandaunasenalletra.JPG')">Manda una Señal</a>
+      <a onclick="cambiarContenido('hastaque.JPG','hastaqueletra.JPG')">Hasta que te conocí</a>
+      <a onclick="cambiarContenido('eltriste.JPG','eltristeletra.JPG')">El Triste</a>
+
+<a onclick="cambiarContenido('hawai.JPG','hawailetra.JPG')">Hawai</a>
+
+<a onclick="cambiarContenido('oyemiamor.JPG','oyemiamorletra.JPG')">Oye mi Amor</a>
+
+<a onclick="cambiarContenido('mevale.JPG','mevaleletra.JPG')">Me Vale</a>
+
+<a onclick="cambiarContenido('mujeramante.JPG','mujeramanteletra.JPG')">Mujer Amante</a>
+
+<a onclick="cambiarContenido('miprimerdiasinti.JPG','miprimerdiasintiletra.JPG')">Mi primer día sin ti</a>
+
+<a onclick="cambiarContenido('nodejesque.JPG','nodejesqueletra.JPG')">No dejes que</a>
+
+<a onclick="cambiarContenido('adioslepido.JPG','adioslepidoletra.JPG')">A Dios le pido</a>
+
+
+
+
+
+
+
+</div>
+
+<div class="contenido">
+
+<div id="inicio" class="inicio">
+EDWIN LEE
+</div>
+
+<img id="marcoImagen" style="display:none">
+
+<br><br>
+
+<img id="marcoTexto" style="display:none">
+
+</div>
+
+</div>
+
+</body>
+</html>
