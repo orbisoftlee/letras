@@ -6,16 +6,19 @@
 <title>Canciones</title>
 
 <style>
+
 body{
     margin:0;
     font-family:Arial;
-    background:#D8A700;
+    background:#cfd3e3;
 }
 
 .container{
     display:flex;
     flex-wrap:wrap;
 }
+
+/* MENU */
 
 .menu{
     width:220px;
@@ -24,14 +27,17 @@ body{
 
 .menu a{
     display:block;
-    padding:6px;
+    padding:8px;
     text-decoration:none;
     color:black;
+    font-size:16px;
 }
 
 .menu a:hover{
     background:#f2c94c;
 }
+
+/* CONTENIDO */
 
 .contenido{
     flex:1;
@@ -49,43 +55,77 @@ body{
     font-weight:bold;
 }
 
-/* Adaptación para celular */
+/* ADAPTACION PARA CELULAR */
+
 @media (max-width:700px){
-    .container{
-        flex-direction:column;
-    }
-    .menu{
-        width:100%;
-    }
+
+.container{
+    flex-direction:column;
 }
+
+.menu{
+    width:100%;
+    display:flex;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.menu a{
+    display:inline-block;
+    padding:12px;
+    font-size:16px;
+    border-right:1px solid #ccc;
+}
+
+}
+
 </style>
 
 <script>
+
 function cambiarContenido(img, txt){
+
     document.getElementById("inicio").style.display="none";
+
     document.getElementById("marcoImagen").src="./"+img;
     document.getElementById("marcoTexto").src="./"+txt;
+
     document.getElementById("marcoImagen").style.display="block";
     document.getElementById("marcoTexto").style.display="block";
+
 }
+
 </script>
 
 </head>
-  <body>
-    <div class="container">
-    <div class="menu">
-      
-      <a onclick="cambiarContenido('lobohombre.jpg','lobohombreletra.jpg')">Lobo Hombre en Paris</a>
-      <a onclick="cambiarContenido('afuera.jpg','afueraletra.jpg')">Afuera</a>
-      <a onclick="cambiarContenido('amordepredador.jpg','amordepredadorletra.jpg')">Amor Depredador</a>
-      <a onclick="cambiarContenido('perdido.jpg','perdidoletra.jpg')">Perdido</a>
-      <a onclick="cambiarContenido('ciudaddelafuria.jpg','ciudaddelafurialetra.jpg')">Ciudad de la Furia</a>
-      <a onclick="cambiarContenido('bolerofalaz.jpg','bolerofalazletra.jpg')">Bolero Falaz</a>
-      <a onclick="cambiarContenido('malditoduende.jpg','malditoduendeletra.jpg')">Maldito Duende</a>
-      <a onclick="cambiarContenido('malagente.jpg','malagenteletra.jpg')">Mala Gente</a>
-      <a onclick="cambiarContenido('mandaunasenal.jpg','mandaunasenalletra.jpg')">Manda una Señal</a>
-      <a onclick="cambiarContenido('hastaque.jpg','hastaqueletra.jpg')">Hasta que te conocí</a>
-      <a onclick="cambiarContenido('eltriste.jpg','eltristeletra.jpg')">El Triste</a>
+
+<body>
+
+<div class="container">
+
+<div class="menu">
+
+<a onclick="cambiarContenido('lobohombre.jpg','lobohombreletra.jpg')">Lobo Hombre en Paris</a>
+
+<a onclick="cambiarContenido('afuera.jpg','afueraletra.jpg')">Afuera</a>
+
+<a onclick="cambiarContenido('amordepredador.jpg','amordepredadorletra.jpg')">Amor Depredador</a>
+
+<a onclick="cambiarContenido('perdido.jpg','perdidoletra.jpg')">Perdido</a>
+
+<a onclick="cambiarContenido('ciudaddelafuria.jpg','ciudaddelafurialetra.jpg')">Ciudad de la Furia</a>
+
+<a onclick="cambiarContenido('bolerofalaz.jpg','bolerofalazletra.jpg')">Bolero Falaz</a>
+
+<a onclick="cambiarContenido('malditoduende.jpg','malditoduendeletra.jpg')">Maldito Duende</a>
+
+<a onclick="cambiarContenido('malagente.jpg','malagenteletra.jpg')">Mala Gente</a>
+
+<a onclick="cambiarContenido('mandaunasenal.jpg','mandaunasenalletra.jpg')">Manda una Señal</a>
+
+<a onclick="cambiarContenido('hastaque.jpg','hastaqueletra.jpg')">Hasta que te conocí</a>
+
+<a onclick="cambiarContenido('eltriste.jpg','eltristeletra.jpg')">El Triste</a>
 
 <a onclick="cambiarContenido('hawai.jpg','hawailetra.jpg')">Hawai</a>
 
@@ -100,12 +140,6 @@ function cambiarContenido(img, txt){
 <a onclick="cambiarContenido('nodejesque.jpg','nodejesqueletra.jpg')">No dejes que</a>
 
 <a onclick="cambiarContenido('adioslepido.jpg','adioslepidoletra.jpg')">A Dios le pido</a>
-
-
-
-
-
-
 
 </div>
 
