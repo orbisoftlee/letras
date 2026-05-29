@@ -4,14 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Canciones</title>
-
 <style>
-
-body{
-    margin:0;
-    font-family:Arial;
-    background:#cfd3e3;
-}
+    body{
+        margin:0;
+        font-family:Arial;
+        background:#cfd3e3;
+    }
 
 .container{
     display:flex;
@@ -82,30 +80,19 @@ body{
 </style>
 
 <script>
-
-function cambiarContenido(img, txt){
-
-    document.getElementById("inicio").style.display="none";
-
-    document.getElementById("marcoImagen").src="./"+img;
-    document.getElementById("marcoTexto").src="./"+txt;
-
-    document.getElementById("marcoImagen").style.display="block";
-    document.getElementById("marcoTexto").style.display="block";
-
-}
-
+    function cambiarContenido(img, txt){
+        document.getElementById("inicio").style.display="none";
+        document.getElementById("marcoImagen").src="./"+img;
+        document.getElementById("marcoTexto").src="./"+txt;
+        document.getElementById("marcoImagen").style.display="block";
+        document.getElementById("marcoTexto").style.display="block";
+    }
 </script>
-
 </head>
 
 <body>
-
 <div class="container">
-
 <div class="menu">
-
-
 <a onclick="cambiarContenido('florecitaroquera.jpg','florecitaroqueraletra.jpg')">Florecita Rockera</a>
 <a onclick="cambiarContenido('trenalsur.jpg','trenalsurletra.jpg')">Tren al Sur</a>
 <a onclick="cambiarContenido('perdidosi.jpg','perdidoletrasi.jpg')">Perdido (si)</a>
